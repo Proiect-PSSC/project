@@ -8,8 +8,24 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.10"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.10" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Application\Commands" />
+      <Folder Include="Application\Handlers" />
+      <Folder Include="Application\Services" />
+      <Folder Include="Domain\Events" />
+      <Folder Include="Domain\Models" />
+      <Folder Include="Domain\Operations" />
+      <Folder Include="Domain\Repositories" />
+      <Folder Include="Infrastructure\Data" />
+      <Folder Include="Infrastructure\Persistence" />
+      <Folder Include="Infrastructure\Services" />
+      <Folder Include="Shared\Common" />
+      <Folder Include="Tests\Application.Tests" />
+      <Folder Include="WebAPI\Controllers" />
     </ItemGroup>
 
 </Project>
