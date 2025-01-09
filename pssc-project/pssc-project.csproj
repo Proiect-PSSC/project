@@ -28,4 +28,9 @@
       <Folder Include="Tests\IntegrationTests" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="PsscProject.Tests\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="PsscProject.Tests\obj\PsscProject.Tests.csproj.nuget.dgspec.json" />
+    </ItemGroup>
+
 </Project>
