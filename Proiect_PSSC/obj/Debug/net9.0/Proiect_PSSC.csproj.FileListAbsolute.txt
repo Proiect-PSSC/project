@@ -1,0 +1,14 @@
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\bin\Debug\net9.0\Proiect_PSSC.exe
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\bin\Debug\net9.0\Proiect_PSSC.deps.json
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\bin\Debug\net9.0\Proiect_PSSC.runtimeconfig.json
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\bin\Debug\net9.0\Proiect_PSSC.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\bin\Debug\net9.0\Proiect_PSSC.pdb
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\Proiect_PSSC.GeneratedMSBuildEditorConfig.editorconfig
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\Proiect_PSSC.AssemblyInfoInputs.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\Proiect_PSSC.AssemblyInfo.cs
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\Proiect_PSSC.csproj.CoreCompileInputs.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\Proiect_PSSC.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\refint\Proiect_PSSC.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\Proiect_PSSC.pdb
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\Proiect_PSSC.genruntimeconfig.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\Workflow_Preluare_Comenzi\Proiect_PSSC\Proiect_PSSC\obj\Debug\net9.0\ref\Proiect_PSSC.dll

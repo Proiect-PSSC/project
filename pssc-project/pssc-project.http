@@ -1,6 +1,0 @@
-@pssc_project_HostAddress = http://localhost:5237
-
-GET {{pssc_project_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
