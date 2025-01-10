@@ -1,0 +1,11 @@
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\bin\Debug\net8.0\Domain.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\bin\Debug\net8.0\Domain.pdb
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\Domain.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\Domain.pdb
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Domain\obj\Debug\net8.0\ref\Domain.dll

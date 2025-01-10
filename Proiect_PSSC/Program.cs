@@ -1,11 +1,13 @@
-﻿using Proiect_PSSC.Application.Workflows;
-using Proiect_PSSC.Domain.Entities;
-using Proiect_PSSC.Domain.Interfaces;
-using Proiect_PSSC.Domain.Services;
-using Proiect_PSSC.Infrastructure.Repositories;
-using Proiect_PSSC.Infrastructure.Database;
+﻿using Domain.Workflows;
+using Domain.Models;
+using Domain.Interfaces;
+using Domain.Operations;
+using Domain.Infrastructure.Repositories;
+using Domain.Infrastructure.Database;
 
-namespace Proiect_PSSC.Program;
+
+
+namespace Proiect_PSSC;
 
 class Program
 {
@@ -13,7 +15,7 @@ class Program
     {
         var dbContext = new AppDBContext();
         var produsRepository = new ProdusRepository(dbContext);
-        var comandaService = new ServiceComanda(produsRepository);
+        var comandaService = new ComandaOperation(produsRepository);
         var workflow = new WorkflowPlasareComanda(comandaService);
         
         var produse = new List<Produs>
@@ -28,4 +30,3 @@ class Program
 
     }
 }
-
