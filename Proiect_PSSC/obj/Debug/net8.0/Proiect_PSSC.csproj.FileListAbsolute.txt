@@ -1,0 +1,15 @@
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Proiect_PSSC.deps.json
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Proiect_PSSC.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Proiect_PSSC.pdb
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Domain.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\bin\Debug\net8.0\Domain.pdb
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.csproj.AssemblyReference.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.GeneratedMSBuildEditorConfig.editorconfig
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.AssemblyInfoInputs.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.AssemblyInfo.cs
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.csproj.CoreCompileInputs.cache
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.csproj.CopyComplete
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\refint\Proiect_PSSC.dll
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\Proiect_PSSC.pdb
+D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\Proiect_PSSC\Proiect_PSSC\obj\Debug\net8.0\ref\Proiect_PSSC.dll
