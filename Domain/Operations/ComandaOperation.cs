@@ -1,5 +1,6 @@
 using Domain.Models;
 using Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Domain.Operations;
 
@@ -56,7 +57,7 @@ public class ComandaOperation
             comanda.AnuleazaComanda("Stoc insuficient.");
             return comanda;
         }
-
+        
         CalculeazaPretTotal(comanda);
         comanda.AcceptaComanda();
         return comanda;

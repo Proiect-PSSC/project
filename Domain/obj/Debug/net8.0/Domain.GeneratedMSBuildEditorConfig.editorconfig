@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Domain
-build_property.ProjectDir = C:\Users\Daniel\RiderProjects\Proiect-PSSC\Domain\
+build_property.ProjectDir = D:\User\Facultate\AN_4_SEM_1\PSSC\Proiect\git_repo\Shared\class_library\project\Domain\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

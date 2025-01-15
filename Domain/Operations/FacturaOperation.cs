@@ -10,7 +10,7 @@ public class FacturaOperation
         if (comanda.Status != "Acceptata")
             throw new InvalidOperationException("Factura poate fi generata doar pentru comenzi acceptate.");
 
-        return new Factura(comanda.Produse, comanda.PretTotal);
+        return new Factura(comanda.Produse, comanda.PretTotal, comanda);
     }
 
     public void TrimiteFactura(Factura factura)

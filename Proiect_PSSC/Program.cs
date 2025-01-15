@@ -4,6 +4,7 @@ using Domain.Operations;
 using Domain.Infrastructure.Database;
 using Domain.Infrastructure.Repositories;
 using Domain.Interfaces;
+using Domain.Exceptions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
@@ -20,63 +21,80 @@ namespace Proiect_PSSC
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Adăugăm DbContext cu conexiunea configurată din appsettings.json
+            // Adaugam DbContext cu conexiunea configurata din appsettings.json
             builder.Services.AddDbContext<AppDBContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("AzureConnection")));
-
-            // Înregistrăm serviciile necesare
+            
             builder.Services.AddScoped<IProdusRepository, ProdusRepository>();
             builder.Services.AddScoped<WorkflowPlasareComanda>();
             builder.Services.AddScoped<WorkflowFacturare>();
             builder.Services.AddScoped<FacturaOperation>();
             builder.Services.AddScoped<ComandaOperation>();
+            builder.Services.AddScoped<TransportOperation>();
+            builder.Services.AddScoped<WorkflowCerereTransport>();
 
             var app = builder.Build();
 
-            // Verificăm conexiunea la baza de date
+            // Verificam conexiunea la baza de date
             var dbContext = app.Services.GetRequiredService<AppDBContext>();
             await TesteazaConexiuneaLaBazaDeDate(dbContext);
-
-            // Continuăm cu restul aplicației
+            
             var workflowPlasareComanda = app.Services.GetRequiredService<WorkflowPlasareComanda>();
             var workflowFacturare = app.Services.GetRequiredService<WorkflowFacturare>();
-            var produsRepository = app.Services.GetRequiredService<IProdusRepository>();
-
-            var produs1 = new Produs(Guid.NewGuid(), "Produs 1", 100, 10);
-            var produs2 = new Produs(Guid.NewGuid(), "Produs 2", 200, 5);
+            var workflowCerereTransport = app.Services.GetRequiredService<WorkflowCerereTransport>();
+            
+            //adaugam doua produse in baza de date
+            var produs1 = new Produs(Guid.NewGuid(), "Iphone", 5000, 1);
+            var produs2 = new Produs(Guid.NewGuid(), "Huse", 100, 3);
 
             dbContext.Produse.Add(produs1);
             dbContext.Produse.Add(produs2);
             await dbContext.SaveChangesAsync();
-
+            
             Console.WriteLine("Testare WorkflowPlasareComanda:");
             var produseComanda = new List<Produs> { produs1, produs2 };
-            var comanda = await workflowPlasareComanda.ProceseazaComanda(produseComanda);
 
-            Console.WriteLine($"Status Comanda: {comanda.Status}");
-            Console.WriteLine($"Pret Total Comanda: {comanda.PretTotal}");
-            
-            Console.WriteLine("\nTestare WorkflowFacturare:");
-            if (comanda.Status == "Acceptata")
+            try
             {
-                workflowFacturare.ProceseazaFacturare(dbContext, comanda);
+                var comanda = await workflowPlasareComanda.ProceseazaComanda(produseComanda);
+
+                Console.WriteLine($"Status Comanda: {comanda.Status}");
+                Console.WriteLine($"Pret Total Comanda: {comanda.PretTotal}");
+                
+                if (comanda.Status == "Acceptata")
+                {
+                    dbContext.Comenzi.Add(comanda);
+                    workflowFacturare.ProceseazaFacturare(dbContext, comanda);
+                }
+            }
+            catch (ComandaAcceptataException ex)
+            {
+                Console.WriteLine($"Exceptie: {ex.Message}");
+            }
+            catch (ComandaAnulataException ex)
+            {
+                Console.WriteLine($"Exceptie: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Eroare necunoscuta: {ex.Message}");
             }
 
             Console.WriteLine("Testul a fost finalizat.");
         }
 
-        // Funcție pentru a verifica conexiunea la baza de date
+        //funcite pentru a verifica conexiunea la baza de date
         private static async Task TesteazaConexiuneaLaBazaDeDate(AppDBContext dbContext)
         {
             try
             {
-                // Încearcă să execute o interogare simplă pentru a verifica conexiunea
+                //incearca sa execute o interogare simpla pentru a verifica conexiunea
                 await dbContext.Database.CanConnectAsync();
                 Console.WriteLine("Conexiunea la baza de date a fost stabilită cu succes.");
             }
             catch (Exception ex)
             {
-                // Dacă apare vreo eroare la conectare, o capturăm și o afișăm
+                //Daca apare vreo eroare la conectare, o capturam și o afisam
                 Console.WriteLine($"Eroare la conectarea la baza de date: {ex.Message}");
             }
         }
