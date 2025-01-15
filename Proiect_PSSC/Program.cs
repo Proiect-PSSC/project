@@ -4,6 +4,7 @@ using Domain.Operations;
 using Domain.Infrastructure.Database;
 using Domain.Infrastructure.Repositories;
 using Domain.Interfaces;
+using Domain.Events;  
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.EventHandlers;
+using Microsoft.Extensions.Logging;
 
 namespace Proiect_PSSC
 {
@@ -20,7 +23,6 @@ namespace Proiect_PSSC
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Adăugăm DbContext cu conexiunea configurată din appsettings.json
             builder.Services.AddDbContext<AppDBContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("AzureConnection")));
 
@@ -30,6 +32,14 @@ namespace Proiect_PSSC
             builder.Services.AddScoped<WorkflowFacturare>();
             builder.Services.AddScoped<FacturaOperation>();
             builder.Services.AddScoped<ComandaOperation>();
+
+            // Înregistrăm evenimentele și handler-ele
+            builder.Services.AddScoped<IEventPublisher, EventPublisher>();  
+            builder.Services.AddScoped<IEventHandler<FacturareRealizataCuSucces>, FacturareRealizataCuSuccesHandler>();
+
+            // Adăugăm Logger pentru Debugging
+            builder.Services.AddLogging();
+            builder.Logging.SetMinimumLevel(LogLevel.Information);
 
             var app = builder.Build();
 
@@ -48,7 +58,8 @@ namespace Proiect_PSSC
             dbContext.Produse.Add(produs1);
             dbContext.Produse.Add(produs2);
             await dbContext.SaveChangesAsync();
-
+            
+            // Simulăm procesarea comenzii 
             Console.WriteLine("Testare WorkflowPlasareComanda:");
             var produseComanda = new List<Produs> { produs1, produs2 };
             var comanda = await workflowPlasareComanda.ProceseazaComanda(produseComanda);

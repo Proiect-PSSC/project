@@ -6,7 +6,7 @@ public class Factura
     public List<Produs> Produse { get; private set; }
     public decimal PretTotal { get; private set; }
     public DateTime DataFacturarii { get; private set; }
-    public string Status { get; private set; }
+    public string Status { get; set; }
     public Factura()
     {
         Produse = new List<Produs>(); 

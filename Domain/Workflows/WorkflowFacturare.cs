@@ -1,30 +1,43 @@
 using Domain.Infrastructure.Database;
 
-namespace Domain.Workflows;
 using Domain.Models;
 using Domain.Operations;
+using Domain.Events;
 
-public class WorkflowFacturare
+namespace Domain.Workflows
 {
-    private readonly FacturaOperation _facturaService;
-
-    public WorkflowFacturare(FacturaOperation facturaService)
+    public class WorkflowFacturare
     {
-        _facturaService = facturaService;
-    }
-
-    public void ProceseazaFacturare(AppDBContext dbContext, Comanda comanda)
-    {
-        try
+        private readonly FacturaOperation _facturaService;
+        private readonly IEventPublisher _eventPublisher;
+        public WorkflowFacturare(FacturaOperation facturaService, IEventPublisher eventPublisher)
         {
-            var factura = _facturaService.GenereazaFactura(comanda);
-            _facturaService.TrimiteFactura(factura);
-            _facturaService.ArhiveazaFactura(dbContext,factura);
-            Console.WriteLine("Facturare realizata cu succes!");
+            _facturaService = facturaService;
+            _eventPublisher = eventPublisher;
         }
-        catch (Exception e)
+
+        public void ProceseazaFacturare(AppDBContext dbContext, Comanda comanda)
         {
-            Console.WriteLine($"Eroare la facturare: {e.Message}");
+            Factura factura = null;
+            
+            try
+            {
+                factura = _facturaService.GenereazaFactura(comanda);
+                _facturaService.TrimiteFactura(factura);
+                _facturaService.ArhiveazaFactura(dbContext,factura);
+                
+                // Publică evenimentul de succes
+                _eventPublisher.Publish(new FacturareRealizataCuSucces(factura.Id, factura.DataFacturarii));
+                
+                Console.WriteLine("Facturare realizata cu succes!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Eroare la facturare: {e.Message}");
+                
+                // Publică evenimentul de anulare
+                _eventPublisher.Publish(new FacturareAnulata(factura.Id, e.Message));
+            }
         }
     }
 }

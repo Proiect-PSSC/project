@@ -20,7 +20,8 @@ namespace Domain.Infrastructure.Database;
 
             modelBuilder.Entity<Factura>()
                 .HasMany(f => f.Produse)
-                .WithMany();
+                .WithOne()
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<Produs>()
                 .Property(p => p.Pret)

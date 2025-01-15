@@ -2,6 +2,7 @@ namespace Domain.Models;
 
 public class Produs
 {
+    
     public Guid Id { get; private set; }
     public string Denumire { get; private set; }
     public decimal Pret { get; private set; }

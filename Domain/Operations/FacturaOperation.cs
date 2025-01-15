@@ -15,13 +15,14 @@ public class FacturaOperation
 
     public void TrimiteFactura(Factura factura)
     {
-        //simulare trimitere
+        //  simulare trimitere
         Console.WriteLine("Factura a fost trimisa catre client.");
     }
 
-    public void ArhiveazaFactura(AppDBContext dbContext, Factura factura)
+    public async Task ArhiveazaFactura(AppDBContext dbContext, Factura factura)
     {
         dbContext.Facturi.Add(factura);
+        await dbContext.SaveChangesAsync();  // Salvează modificările în baza de date
         Console.WriteLine("Factura a fost arhivata.");
     }
 }
