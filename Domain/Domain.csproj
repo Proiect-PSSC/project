@@ -21,6 +21,12 @@
 
     <ItemGroup>
       <Compile Remove="EventHandlers\FacturareAnulataHandler.cs" />
+      <Compile Remove="Migrations\20250115195341_FixRecreateFacturi.cs" />
+      <Compile Remove="Migrations\20250115195341_FixRecreateFacturi.Designer.cs" />
+      <Compile Remove="Migrations\20250115194200_RecreateFacturi.cs" />
+      <Compile Remove="Migrations\20250115194200_RecreateFacturi.Designer.cs" />
+      <Compile Remove="Migrations\20250115193905_ResyncWithDatabase.cs" />
+      <Compile Remove="Migrations\20250115193905_ResyncWithDatabase.Designer.cs" />
     </ItemGroup>
 
 </Project>
