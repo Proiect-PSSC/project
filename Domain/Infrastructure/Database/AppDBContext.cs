@@ -2,7 +2,7 @@ using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 namespace Domain.Infrastructure.Database;
     public class AppDBContext : DbContext
-    {
+    { 
         public DbSet<Produs> Produse { get; set; }
         public DbSet<Factura> Facturi { get; set; }
 
