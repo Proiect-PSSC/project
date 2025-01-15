@@ -26,6 +26,7 @@ public class ProdusRepository : IProdusRepository
         {
             //si aici
             existingProdus.Cantitate = produs.Cantitate;
+            await _context.SaveChangesAsync();
         }
     }
 }

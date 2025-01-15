@@ -7,7 +7,11 @@ public class Factura
     public decimal PretTotal { get; private set; }
     public DateTime DataFacturarii { get; private set; }
     public string Status { get; private set; }
-
+    public Factura()
+    {
+        Produse = new List<Produs>(); 
+        Status = "Generata";
+    }
     public Factura(List<Produs> produse, decimal pretTotal)
     {
         Id = Guid.NewGuid();

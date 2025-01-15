@@ -1,20 +1,36 @@
 using Domain.Models;
-
+using Microsoft.EntityFrameworkCore;
 namespace Domain.Infrastructure.Database;
-
-public class AppDBContext
-{
-    public List<Produs> Produse { get; set; }
-    public List<Factura> Facturi { get; set; }
-
-    public AppDBContext()
+    public class AppDBContext : DbContext
     {
-        Produse = new List<Produs>
+        public DbSet<Produs> Produse { get; set; }
+        public DbSet<Factura> Facturi { get; set; }
+
+        public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            new Produs(Guid.NewGuid(), "Produs1", 100m, 10),
-            new Produs(Guid.NewGuid(), "Produs2", 50m, 20),
-            new Produs(Guid.NewGuid(), "Produs3", 99m, 5),
-        };
-        Facturi = new List<Factura>();
-    }
+            modelBuilder.Entity<Produs>()
+                .ToTable("Produse")
+                .HasKey(p => p.Id);
+            
+            modelBuilder.Entity<Factura>()
+                .ToTable("Facturi")
+                .HasKey(f => f.Id);
+
+            modelBuilder.Entity<Factura>()
+                .HasMany(f => f.Produse)
+                .WithMany();
+            
+            modelBuilder.Entity<Produs>()
+                .Property(p => p.Pret)
+                .HasColumnType("decimal(18,2)");
+            
+            modelBuilder.Entity<Factura>()
+                .Property(f => f.PretTotal)
+                .HasColumnType("decimal(18,2)");
+            
+            base.OnModelCreating(modelBuilder);
+        }
+
 }

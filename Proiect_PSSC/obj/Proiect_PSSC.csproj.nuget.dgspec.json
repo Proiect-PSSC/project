@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\RiderProjects\\project\\Proiect_PSSC\\Proiect_PSSC.csproj": {}
+    "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Proiect_PSSC\\Proiect_PSSC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\RiderProjects\\project\\Domain\\Domain.csproj": {
+    "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\RiderProjects\\project\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Daniel\\RiderProjects\\project\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\RiderProjects\\project\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\Daniel\\RiderProjects\\project\\Proiect_PSSC\\Proiect_PSSC.csproj": {
+    "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Proiect_PSSC\\Proiect_PSSC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\RiderProjects\\project\\Proiect_PSSC\\Proiect_PSSC.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Proiect_PSSC\\Proiect_PSSC.csproj",
         "projectName": "Proiect_PSSC",
-        "projectPath": "C:\\Users\\Daniel\\RiderProjects\\project\\Proiect_PSSC\\Proiect_PSSC.csproj",
+        "projectPath": "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Proiect_PSSC\\Proiect_PSSC.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\RiderProjects\\project\\Proiect_PSSC\\obj\\",
+        "outputPath": "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Proiect_PSSC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +106,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Daniel\\RiderProjects\\project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Daniel\\RiderProjects\\project\\Domain\\Domain.csproj"
+              "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Daniel\\RiderProjects\\Proiect-PSSC\\Domain\\Domain.csproj"
               }
             }
           }
@@ -110,6 +126,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -122,6 +154,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
